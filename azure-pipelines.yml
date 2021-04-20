@@ -9,7 +9,10 @@ steps:
   inputs:
     version: '5.0.x'
     includePreviewVersions: true # Required for preview versions
-  
+
+- task: NuGetToolInstaller@1
+  inputs:
+    versionSpec: '5.9.x'
 - task: DotNetCoreCLI@2
   displayName: 'dotnet build'
   inputs:
